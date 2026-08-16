@@ -1,69 +1,211 @@
-# CodeIgniter 4 Application Starter
+# 📚 Perpustakaan Buku Digital
 
-## What is CodeIgniter?
+Aplikasi web **Perpustakaan Buku Digital** merupakan aplikasi berbasis web yang dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS). Aplikasi ini dibangun menggunakan **CodeIgniter 4** dengan database **MySQL**.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Aplikasi digunakan untuk mengelola data buku secara digital dengan menyediakan fitur tambah, lihat, ubah, hapus, pencarian, pagination, serta penanganan session.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## 👨‍💻 Informasi Project
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+| Keterangan         | Detail                                         |
+| ------------------ | ---------------------------------------------- |
+| Nama Aplikasi      | Perpustakaan Buku Digital                      |
+| Framework          | CodeIgniter 4                                  |
+| Bahasa Pemrograman | PHP                                            |
+| Database           | MySQL                                          |
+| Database Name      | `perpustakaan_digital`                         |
+| Web Server         | XAMPP                                          |
+| Repository         | GitHub                                         |
+| Local URL          | `http://localhost/perpustakaan-digital/public` |
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## 🚀 Fitur Aplikasi
 
-## Installation & updates
+### 1. Create
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Pengguna dapat menambahkan data buku baru melalui form tambah buku. Data yang dimasukkan disimpan ke database MySQL.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### 2. Read
 
-## Setup
+Aplikasi menampilkan daftar buku yang tersimpan di database dalam bentuk tabel sehingga data dapat dilihat dan dikelola dengan mudah.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### 3. Update
 
-## Important Change with index.php
+Pengguna dapat mengubah atau memperbarui informasi buku yang sudah tersimpan.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### 4. Delete
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+Pengguna dapat menghapus data buku yang sudah tidak diperlukan.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### 5. Session
 
-## Repository Management
+Aplikasi menggunakan session untuk menyimpan informasi pengguna selama proses penggunaan aplikasi dan membantu mengatur status akses pada halaman tertentu.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### 6. Searching
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Fitur pencarian digunakan untuk mencari buku berdasarkan informasi yang tersedia sehingga pengguna tidak perlu mencari data secara manual pada seluruh tabel.
 
-## Server Requirements
+### 7. Pagination
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+Data buku ditampilkan menggunakan pagination agar daftar buku yang banyak tetap mudah dibaca dan tidak ditampilkan dalam satu halaman secara keseluruhan.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+## 🗄️ Database
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+Nama database:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+```text
+perpustakaan_digital
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Database menggunakan MySQL yang dijalankan melalui XAMPP/phpMyAdmin.
+
+File database hasil export tersedia di repository:
+
+```text
+perpustakaan_digital.sql
+```
+
+File tersebut dapat digunakan untuk membuat kembali database aplikasi.
+
+## ⚙️ Konfigurasi Database
+
+Konfigurasi database CodeIgniter dilakukan melalui file `.env`.
+
+Contoh konfigurasi:
+
+```text
+database.default.hostname = localhost
+database.default.database = perpustakaan_digital
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.port = 3306
+```
+
+> File `.env` tidak disertakan ke repository karena dapat berisi konfigurasi lokal.
+
+## ▶️ Cara Menjalankan Aplikasi
+
+### 1. Jalankan XAMPP
+
+Aktifkan:
+
+* Apache
+* MySQL
+
+### 2. Pastikan project berada di
+
+```text
+C:\xampp\htdocs\perpustakaan-digital
+```
+
+### 3. Buat database
+
+Buka:
+
+```text
+http://localhost/phpmyadmin
+```
+
+Buat database:
+
+```text
+perpustakaan_digital
+```
+
+Kemudian import file:
+
+```text
+perpustakaan_digital.sql
+```
+
+### 4. Jalankan aplikasi
+
+Aplikasi dapat diakses melalui:
+
+```text
+http://localhost/perpustakaan-digital/public
+```
+
+Jika menggunakan PHP Spark, jalankan dari folder project:
+
+```bash
+php spark serve
+```
+
+Kemudian akses:
+
+```text
+http://localhost:8080
+```
+
+## 📁 Struktur Project
+
+```text
+perpustakaan-digital/
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   └── Views/
+├── public/
+├── tests/
+├── writable/
+├── composer.json
+├── composer.lock
+├── spark
+├── README.md
+└── perpustakaan_digital.sql
+```
+
+## 🖥️ Tampilan Aplikasi
+
+### Halaman Utama / Dashboard
+
+> Masukkan screenshot halaman utama aplikasi di bagian ini.
+
+### Halaman Data Buku
+
+> Masukkan screenshot daftar buku di bagian ini.
+
+### Form Tambah Buku
+
+> Masukkan screenshot form tambah buku di bagian ini.
+
+### Form Edit Buku
+
+> Masukkan screenshot form edit buku di bagian ini.
+
+### Fitur Pencarian dan Pagination
+
+> Masukkan screenshot fitur searching dan pagination di bagian ini.
+
+## 🎥 Video Presentasi
+
+Video presentasi aplikasi akan diunggah ke YouTube sebagai bagian dari persyaratan UAS.
+
+**Link YouTube:**
+
+> Masukkan link video YouTube setelah proses upload selesai.
+
+## 🎬 Video Proses Vibe Coding
+
+Video dokumentasi proses pembuatan aplikasi menggunakan metode **vibe coding** akan dilampirkan sebagai bagian dari pengumpulan UAS.
+
+**Link Video:**
+
+> Masukkan link video setelah selesai diunggah.
+
+## 📦 Pengumpulan
+
+Repository ini berisi:
+
+* Source code aplikasi CodeIgniter 4
+* Database MySQL dalam format `.sql`
+* README/dokumentasi project
+* Konfigurasi dan petunjuk menjalankan aplikasi
+
+## 🎓 Keterangan
+
+Project ini dibuat untuk memenuhi tugas **Ujian Akhir Semester (UAS)** dengan topik:
+
+**"Perpustakaan Buku Digital"**
+
+Teknologi utama yang digunakan adalah **CodeIgniter 4, PHP, MySQL, XAMPP, HTML, CSS, dan JavaScript.**
