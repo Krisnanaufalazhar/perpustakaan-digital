@@ -15,7 +15,7 @@ Aplikasi digunakan untuk mengelola data buku secara digital dengan menyediakan f
 | Database Name      | `perpustakaan_digital`                         |
 | Web Server         | XAMPP                                          |
 | Repository         | GitHub                                         |
-| Local URL          | `http://localhost/perpustakaan-digital/public` |
+| Link Presentasi    | https://youtu.be/xIqfdgmBv-0                   |
 
 ## 🚀 Fitur Aplikasi
 
@@ -183,15 +183,8 @@ Video presentasi aplikasi akan diunggah ke YouTube sebagai bagian dari persyarat
 
 **Link YouTube:**
 
-> Masukkan link video YouTube setelah proses upload selesai.
+https://youtu.be/xIqfdgmBv-0
 
-## 🎬 Video Proses Vibe Coding
-
-Video dokumentasi proses pembuatan aplikasi menggunakan metode **vibe coding** akan dilampirkan sebagai bagian dari pengumpulan UAS.
-
-**Link Video:**
-
-> Masukkan link video setelah selesai diunggah.
 
 ## 📦 Pengumpulan
 
